@@ -19,6 +19,10 @@
     "CUL",
     "EM1000"
   ],
+  "engines": {
+    "node": ">4.0.0",
+    "homebridge": "^0.4.38"
+  }
   "author": "foxthefox",
   "license": "MIT",
   "dependencies": {
