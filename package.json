@@ -1,5 +1,5 @@
 {
-  "name": "hombridge-cul",
+  "name": "homebridge-cul",
   "version": "0.0.1",
   "description": "homebridge plugin with CUL-USB",
   "main": "index.js",
@@ -14,7 +14,7 @@
     "url": "https://github.com/foxthefox/homebridge-cul/issues"
   },
   "keywords": [
-    "homobridge",
+    "homebridge",
     "plugin",
     "CUL",
     "EM1000"
