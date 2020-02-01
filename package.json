@@ -1,0 +1,32 @@
+{
+  "name": "hombridge-cul",
+  "version": "0.0.1",
+  "description": "homebridge plugin with CUL-USB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/foxthefox/homebridge-cul"
+  },
+  "bugs": {
+    "url": "https://github.com/foxthefox/homebridge-cul/issues"
+  },
+  "keywords": [
+    "homobridge",
+    "plugin",
+    "CUL",
+    "EM1000"
+  ],
+  "author": "foxthefox",
+  "license": "MIT",
+  "dependencies": {
+    "cul": "^0.13.0",
+    "extend": "^3.0.2",
+    "fakegato-history": "^0.5.6"
+  },
+  "devDependencies": {
+    "jshint": "^2.11.0"
+  }
+}
