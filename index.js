@@ -14,7 +14,7 @@ module.exports = function(homebridge) {
   
   // For platform plugin to be considered as dynamic platform plugin,
   // registerPlatform(pluginName, platformName, constructor, dynamic), dynamic must be true
-  homebridge.registerPlatform("homebridge-cul", "CulPlatform", CulPlatform, true);
+  homebridge.registerPlatform("homebridge-cul", "CUL", CulPlatform, true);
 }
 
 // Platform constructor
