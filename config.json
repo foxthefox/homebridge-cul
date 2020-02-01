@@ -1,4 +1,8 @@
 {
+   "plugins": [
+        "homebridge-config-ui-x",
+        "homebridge-cul"
+    ],
     "platforms": [
       {
         "platform": "CUL",
