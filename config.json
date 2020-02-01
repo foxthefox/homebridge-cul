@@ -1,0 +1,13 @@
+{
+    "platforms": [
+      {
+        "platform": "CUL",
+        "name": "My Energy",
+        "connectionMode": "serial",
+        "baudrate": 9600,
+        "serialport": "/dev/ttyACM0",
+        "mode": "SlowRF",
+        "debug": true
+      }
+    ]
+  }
