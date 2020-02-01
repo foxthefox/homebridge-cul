@@ -14,6 +14,7 @@
     "url": "https://github.com/foxthefox/homebridge-cul/issues"
   },
   "keywords": [
+    "homebridge-plugin",
     "homebridge",
     "plugin",
     "CUL",
