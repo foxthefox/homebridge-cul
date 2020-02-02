@@ -183,6 +183,13 @@ CulPlatform.prototype.addAccessory = function(accessoryName) {
   uuid = UUIDGen.generate(accessoryName);
 
   var newAccessory = new Accessory(accessoryName, uuid);
+  
+  newAccessory.getService(Service.AccessoryInformation)
+    .setCharacteristic(Characteristic.Manufacturer, 'CUL')
+    .setCharacteristic(Characteristic.Model, 'CUL EM')
+    // .setCharacteristic(Characteristic.SerialNumber, ...)
+    .setCharacteristic(Characteristic.FirmwareRevision, require('./package.json').version)
+  
   newAccessory.on('identify', function(paired, callback) {
     platform.log(newAccessory.displayName, "Identify!!!");
     callback();
@@ -197,6 +204,27 @@ CulPlatform.prototype.addAccessory = function(accessoryName) {
     platform.log(newAccessory.displayName, "Light -> " + value);
     callback();
   });
+
+  newAccessory
+    .getService(Service.Lightbulb).addCharacteristic(Characteristic.Brightness)
+    .on('set', function(value, callback) { 
+      platform.log(newAccessory.displayName, "Bright -> " + value);
+        callback();
+      });
+
+  newAccessory
+    .getService(Service.Lightbulb).addCharacteristic(Characteristic.Saturation)
+    .on('set', function(value, callback) { 
+      platform.log(newAccessory.displayName, "Sat -> " + value);
+        callback();
+      });
+
+  newAccessory
+    .getService(Service.Lightbulb).addCharacteristic(Characteristic.Hue)
+    .on('set', function(value, callback) { 
+      platform.log(newAccessory.displayName, "Hue -> " + value);
+        callback();
+      });
 
   this.accessories.push(newAccessory);
   this.api.registerPlatformAccessories("homebridge-samplePlatform", "CulPlatform", [newAccessory]);
