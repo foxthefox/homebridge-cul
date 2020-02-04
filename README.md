@@ -1,4 +1,4 @@
-# homebridge-cul
+# homebridge-cul ALPHA
 hombridge plugin CUL -USB
 
 After adding this to config.json
