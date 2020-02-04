@@ -1,0 +1,48 @@
+{
+    "pluginAlias": "CUL",
+    "pluginType": "platform",
+    "singular": true,
+    "headerDisplay": "Homebridge plugin for the CUL-USB Stick and ELV EM1000 energy meter",
+    "footerDisplay": "For a detailed description, see the [README](https://github.com/foxthefox/homebridge-cul#readme) file.",
+    "schema": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "title": "Name",
+                "type": "string",
+                "default": "cul platform",
+                "required": true
+            },
+            "device": {
+                "title": "device port",
+                "type": "string",
+                "default": "/dev/ttyACM0",
+                "description": "The device port on which the CUL-UBS is recognized",
+                "required": true
+            },
+            "baudrate": {
+                "title": "device baudrate",
+                "type": "integer",
+                "default": 9600,
+                "description": "The baudrate for the CUL-USB, normally 9600.",
+                "required": true
+            },
+            "mode": {
+                "title": "device mode",
+                "type": "string",
+                "default": "SlowRF",
+                "description": "The mode for the CUL-USB, normally SlowRF",
+                "required": true
+            },
+            "ignoredDevices": {
+                "title": "devices to be ignored",
+                "type": "array",
+                "device_id": {
+                    "type": "string",
+                    "title": "Device ID"
+                    },
+                "description": "The first 6 Characters of the RAW string seen in the debug-log"
+            }
+        }
+    }
+}
