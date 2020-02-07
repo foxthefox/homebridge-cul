@@ -27,6 +27,26 @@ function CulPlatform(log, config, api) {
   this.config = config;
   this.accessories = [];
 
+  /**
+  var options = {
+        baudRate:   parseInt(config.baudrate)   || parseInt(9600)
+    };
+  const sp = new SerialPort(adapter.config.serialport || '/dev/ttyUSB0', options, function (error) {
+        if ( error ) {
+            adapter.log.info('failed to open: '+error);
+		        console.log('usb open error'+error);
+        } else {
+            adapter.log.info('open');
+	          const parser = sp.pipe(new Readline({ delimiter: '\r\n' }));
+            parser.on('data', function(data) {
+            adapter.log.info('data received: ' + data);
+		        console.log('recv data = '+ data);
+            }
+        });
+    
+  */
+  
+  
   //server
   this.requestServer = http.createServer(function(request, response) {
     if (request.url === "/add") {
